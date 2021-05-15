@@ -1,0 +1,403 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat May 15 14:38:06 2021
+# Process ID: 10096
+# Current directory: C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1
+# Command line: vivado.exe -log pheap.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pheap.tcl
+# Log file: C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1/pheap.vds
+# Journal file: C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source pheap.tcl -notrace
+Command: synth_design -top pheap -part xc7a100tcsg324-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18212
+WARNING: [Synth 8-2507] parameter declaration becomes local in levelRam with formal parameter declaration list [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:16]
+WARNING: [Synth 8-2507] parameter declaration becomes local in levelRam with formal parameter declaration list [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:17]
+WARNING: [Synth 8-2507] parameter declaration becomes local in levelRam with formal parameter declaration list [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:19]
+WARNING: [Synth 8-2507] parameter declaration becomes local in levelRam with formal parameter declaration list [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:20]
+WARNING: [Synth 8-2507] parameter declaration becomes local in levelRam with formal parameter declaration list [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:21]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pheap' [C:/Users/mobil/ThesisIncludes/pheap/pheap.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'leq1' [C:/Users/mobil/ThesisIncludes/pheap/leq1.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/mobil/ThesisIncludes/pheap/leq1.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'leq1' (1#1) [C:/Users/mobil/ThesisIncludes/pheap/leq1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'levelv2' [C:/Users/mobil/ThesisIncludes/pheap/levelv2.sv:3]
+	Parameter LEVEL bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'levelRam' [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:3]
+	Parameter RAMLEVEL bound to: 2 - type: integer 
+	Parameter RAM_WIDTH bound to: 37 - type: integer 
+	Parameter RAM_DEPTH bound to: 2 - type: integer 
+	Parameter INIT_FILE bound to: level2.data - type: string 
+	Parameter START_LOC bound to: 1 - type: integer 
+	Parameter END_LOC bound to: 2 - type: integer 
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'levelRam' (2#1) [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'levelv2' (3#1) [C:/Users/mobil/ThesisIncludes/pheap/levelv2.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'leq' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:3]
+	Parameter LEVEL bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'leq' (4#1) [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'level_shifter' [C:/Users/mobil/ThesisIncludes/pheap/level_shifter.sv:1]
+	Parameter LEVEL bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'level_shifter' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/level_shifter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'levelv2__parameterized0' [C:/Users/mobil/ThesisIncludes/pheap/levelv2.sv:3]
+	Parameter LEVEL bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'levelRam__parameterized0' [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:3]
+	Parameter RAMLEVEL bound to: 3 - type: integer 
+	Parameter RAM_WIDTH bound to: 37 - type: integer 
+	Parameter RAM_DEPTH bound to: 4 - type: integer 
+	Parameter INIT_FILE bound to: level3.data - type: string 
+	Parameter START_LOC bound to: 3 - type: integer 
+	Parameter END_LOC bound to: 6 - type: integer 
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'levelRam__parameterized0' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'levelv2__parameterized0' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/levelv2.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'leq__parameterized0' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:3]
+	Parameter LEVEL bound to: 3 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'leq__parameterized0' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'level_shifter__parameterized0' [C:/Users/mobil/ThesisIncludes/pheap/level_shifter.sv:1]
+	Parameter LEVEL bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'level_shifter__parameterized0' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/level_shifter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'levelv2__parameterized1' [C:/Users/mobil/ThesisIncludes/pheap/levelv2.sv:3]
+	Parameter LEVEL bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'levelRam__parameterized1' [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:3]
+	Parameter RAMLEVEL bound to: 4 - type: integer 
+	Parameter RAM_WIDTH bound to: 37 - type: integer 
+	Parameter RAM_DEPTH bound to: 8 - type: integer 
+	Parameter INIT_FILE bound to: level4.data - type: string 
+	Parameter START_LOC bound to: 7 - type: integer 
+	Parameter END_LOC bound to: 14 - type: integer 
+WARNING: [Synth 8-2898] ignoring malformed $readmem task: invalid memory name [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:34]
+INFO: [Synth 8-6155] done synthesizing module 'levelRam__parameterized1' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'levelv2__parameterized1' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/levelv2.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'leq__parameterized1' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:3]
+	Parameter LEVEL bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'leq__parameterized1' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'level_shifter__parameterized1' [C:/Users/mobil/ThesisIncludes/pheap/level_shifter.sv:1]
+	Parameter LEVEL bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'level_shifter__parameterized1' (5#1) [C:/Users/mobil/ThesisIncludes/pheap/level_shifter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pheap' (6#1) [C:/Users/mobil/ThesisIncludes/pheap/pheap.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'leq1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'leq'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'leq__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'leq__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                READ_MEM |                                0 |                               00
+                 SET_OUT |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'leq1'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq1.sv:46]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                READ_MEM |                                0 |                               00
+                 SET_OUT |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'leq'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:44]
+WARNING: [Synth 8-327] inferring latch for variable 'active_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:41]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                READ_MEM |                                0 |                               00
+                 SET_OUT |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'leq__parameterized0'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:44]
+WARNING: [Synth 8-327] inferring latch for variable 'active_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:41]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                READ_MEM |                                0 |                               00
+                 SET_OUT |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'leq__parameterized1'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:44]
+WARNING: [Synth 8-327] inferring latch for variable 'active_reg' [C:/Users/mobil/ThesisIncludes/pheap/leq.sv:41]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	               37 Bit    Registers := 6     
+	               32 Bit    Registers := 8     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   37 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 8     
+	   2 Input   32 Bit        Muxes := 44    
+	   4 Input   32 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 18    
+	   3 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 9     
+	   2 Input    1 Bit        Muxes := 57    
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][active] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][active]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][active] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][active]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][3] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][capacity][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][2] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][capacity][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][1] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][capacity][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][0] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][capacity][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][3] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][capacity][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][2] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][capacity][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][1] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][capacity][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][0] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][capacity][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][31] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][31]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][30] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][30]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][29] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][29]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][28] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][28]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][27] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][27]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][26] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][26]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][25] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][25]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][24] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][24]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][23] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][23]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][22] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][22]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][21] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][21]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][20] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][20]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][19] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][19]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][18] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][18]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][17] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][17]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][16] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][16]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][15] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][15]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][14] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][14]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][13] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][13]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][12] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][12]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][11] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][11]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][10] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][10]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][9] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][9]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][8] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][8]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][7] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][7]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][6] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][6]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][5] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][5]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][4] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][4]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][3] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][2] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][1] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][0] ) from module (levelRam) as it has self-loop and (\level_ram_reg[0][priorityValue][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][31] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][31]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][30] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][30]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][29] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][29]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][28] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][28]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][27] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][27]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][26] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][26]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][25] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][25]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][24] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][24]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][23] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][23]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][22] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][22]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][21] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][21]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][20] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][20]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][19] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][19]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][18] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][18]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][17] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][17]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][16] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][16]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][15] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][15]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][14] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][14]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][13] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][13]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][12] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][12]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][11] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][11]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][10] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][10]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][9] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][9]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][8] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][8]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][7] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][7]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][6] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][6]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][5] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][5]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][4] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][4]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][3] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][2] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][1] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][priorityValue][0] ) from module (levelRam) as it has self-loop and (\level_ram_reg[1][priorityValue][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][active] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][active]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][active] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[1][active]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[2][active] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[2][active]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[3][active] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[3][active]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][3] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][capacity][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][2] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][capacity][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][1] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][capacity][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][capacity][0] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][capacity][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][3] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[1][capacity][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][2] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[1][capacity][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][1] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[1][capacity][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[1][capacity][0] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[1][capacity][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[2][capacity][3] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[2][capacity][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[2][capacity][2] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[2][capacity][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[2][capacity][1] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[2][capacity][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[2][capacity][0] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[2][capacity][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[3][capacity][3] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[3][capacity][3]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[3][capacity][2] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[3][capacity][2]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[3][capacity][1] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[3][capacity][1]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[3][capacity][0] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[3][capacity][0]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][31] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][priorityValue][31]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][30] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][priorityValue][30]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][29] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][priorityValue][29]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][28] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][priorityValue][28]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][27] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][priorityValue][27]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Synth 8-5966] Removing register instance (\level_ram_reg[0][priorityValue][26] ) from module (levelRam__parameterized0) as it has self-loop and (\level_ram_reg[0][priorityValue][26]__0 ) is actual driver [C:/Users/mobil/ThesisIncludes/pheap/levelRam.sv:51]
+INFO: [Common 17-14] Message 'Synth 8-5966' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    28|
+|3     |LUT1   |     3|
+|4     |LUT2   |   556|
+|5     |LUT3   |    97|
+|6     |LUT4   |   251|
+|7     |LUT5   |    41|
+|8     |LUT6   |   495|
+|9     |MUXF7  |    74|
+|10    |FDRE   |  1025|
+|11    |IBUF   |    37|
+|12    |OBUF   |    65|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+------------------------------+------+
+|      |Instance                 |Module                        |Cells |
++------+-------------------------+------------------------------+------+
+|1     |top                      |                              |  2673|
+|2     |  \genHeap[1].I_LEQ      |leq1                          |   183|
+|3     |  \genHeap[2].I_LEVEL    |levelv2                       |   372|
+|4     |    U_RAM                |levelRam                      |   225|
+|5     |  \genHeap[2].I_LEQ      |leq                           |   222|
+|6     |  \genHeap[2].I_SHIFTER  |level_shifter                 |     2|
+|7     |  \genHeap[3].I_LEVEL    |levelv2__parameterized0       |   449|
+|8     |    U_RAM                |levelRam__parameterized0      |   301|
+|9     |  \genHeap[3].I_LEQ      |leq__parameterized0           |   223|
+|10    |  \genHeap[3].I_SHIFTER  |level_shifter__parameterized0 |     4|
+|11    |  \genHeap[4].I_LEVEL    |levelv2__parameterized1       |   750|
+|12    |    U_RAM                |levelRam__parameterized1      |   601|
+|13    |  \genHeap[4].I_LEQ      |leq__parameterized1           |   111|
+|14    |  \genHeap[4].I_SHIFTER  |level_shifter__parameterized1 |     6|
++------+-------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1014.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1014.945 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1014.945 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1014.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 102 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1014.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+153 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1014.945 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1/pheap.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pheap_utilization_synth.rpt -pb pheap_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 15 14:38:36 2021...

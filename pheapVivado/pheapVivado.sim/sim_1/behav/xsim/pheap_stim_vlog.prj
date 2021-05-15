@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../pheapTypes.sv" \
+"../../../../../leq.sv" \
+"../../../../../level.sv" \
+"../../../../../level_shifter.sv" \
+"../../../../../pheap.sv" \
+"../../../../../levelv2.sv" \
+"../../../../../levelRam.sv" \
+"../../../../../leq1.sv" \
+"../../../../../pheap_stim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

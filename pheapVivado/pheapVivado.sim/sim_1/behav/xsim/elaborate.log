@@ -1,0 +1,31 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 79e4894066ca45f4bb687a8a448578cc --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot pheap_stim_behav xil_defaultlib.pheap_stim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'valid_out' [C:/Users/mobil/ThesisIncludes/pheap/pheap_stim.sv:8]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.pheapTypes
+Compiling module xil_defaultlib.leq1
+Compiling module xil_defaultlib.levelRam_default
+Compiling module xil_defaultlib.levelv2
+Compiling module xil_defaultlib.leq
+Compiling module xil_defaultlib.level_shifter(LEVEL=2)
+Compiling module xil_defaultlib.levelRam(RAMLEVEL=3)
+Compiling module xil_defaultlib.levelv2(LEVEL=3)
+Compiling module xil_defaultlib.leq(LEVEL=3)
+Compiling module xil_defaultlib.level_shifter(LEVEL=3)
+Compiling module xil_defaultlib.levelRam(RAMLEVEL=4)
+Compiling module xil_defaultlib.levelv2(LEVEL=4)
+Compiling module xil_defaultlib.leq(LEVEL=4)
+Compiling module xil_defaultlib.level_shifter(LEVEL=4)
+Compiling module xil_defaultlib.pheap_default
+Compiling module xil_defaultlib.pheap_stim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pheap_stim_behav

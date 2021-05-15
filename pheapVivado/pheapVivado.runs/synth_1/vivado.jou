@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat May 15 14:38:06 2021
+# Process ID: 10096
+# Current directory: C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1
+# Command line: vivado.exe -log pheap.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pheap.tcl
+# Log file: C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1/pheap.vds
+# Journal file: C:/Users/mobil/ThesisIncludes/pheap/pheapVivado/pheapVivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source pheap.tcl -notrace
