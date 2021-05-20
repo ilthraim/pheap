@@ -5,7 +5,7 @@ package pheapTypes;
     parameter LEVELS = 16;
 
     typedef enum logic [1:0] {DONE, NEXT_LEVEL, WAIT} done_t;
-    typedef enum logic [1:0] {FREE, LEQ, DEQ, CLEAR} opcode_t;
+    typedef enum logic [1:0] {FREE, LEQ, DEQ} opcode_t;
     typedef logic [31:0] pValue;
 
     typedef struct packed {
