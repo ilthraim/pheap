@@ -22,7 +22,7 @@ module levelRam
 
 
 
-  pheapTypes::entry_t level_ram [RAM_DEPTH-1:0];
+  reg [RAM_WIDTH - 1:0] level_ram [RAM_DEPTH-1:0];
   reg [RAM_WIDTH-1:0] ram_data_a = {RAM_WIDTH{1'b0}};
   reg [RAM_WIDTH-1:0] ram_data_b = {RAM_WIDTH{1'b0}};
 

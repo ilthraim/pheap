@@ -1,4 +1,7 @@
-Running: xsim.dir/pheap_stim_behav/xsimk.exe -simmode gui -wdb pheap_stim_behav.wdb -simrunnum 0 -socket 52376
+Running: xsim.dir/pheap_stim_behav/xsimk.exe -simmode gui -wdb pheap_stim_behav.wdb -simrunnum 0 -socket 62760
 Design successfully loaded
-Design Loading Memory Usage: 5952 KB (Peak: 5952 KB)
+Design Loading Memory Usage: 5940 KB (Peak: 5940 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6796 KB (Peak: 6796 KB)
+Simulation CPU Usage: 30 ms

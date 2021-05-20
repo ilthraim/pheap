@@ -17,7 +17,7 @@ pValue in_reg;
 always_ff @(posedge clk) begin
     if (rst) state <= READ_MEM;
     else state <= next;
-    
+
     if (state == READ_MEM && start)
         in_reg <= in;
 end
@@ -37,8 +37,8 @@ always_comb begin
             if (start) begin
                 active = 1;
                 done = WAIT;
-                
-                
+
+
                 next = SET_OUT;
             end else begin
                 next = READ_MEM;
@@ -53,26 +53,28 @@ always_comb begin
                 if (~rTop.active) begin
                     wData.active = 1'b1;
                     wData.capacity = rTop.capacity - 1;
-                    wData.priorityValue = in_reg; //gotta fix this - write the prioritity, decremented capacity and active
+                    wData.priorityValue = in_reg;
                     wenTop = 1'b1;
                     done = DONE;
                 end else begin
-                    if (rTop.priorityValue < in_reg) begin //also fix this - if currentpriority less than priority to be written
-                        out = rTop.priorityValue; //take a look at this logic: idk if legal
+                    if (rTop.priorityValue < in_reg) begin
+                        out = rTop.priorityValue;
                         wData.active = 1'b1;
-                        wData.capacity = rTop.capacity - 1;
+                        wData.capacity = (rTop.capacity == 0) ? 0 : rTop.capacity - 1;
                         wData.priorityValue = in_reg;
                         wenTop = 1'b1;
                     end else begin out = in_reg;
                         wData.active = 1'b1;
-                        wData.capacity = rTop.capacity - 1;
+                        wData.capacity = (rTop.capacity == 0) ? 0 : rTop.capacity - 1;
                         wData.priorityValue = rTop.priorityValue;
                         wenTop = 1'b1;
                     end
-                    if (rBotL.capacity != 0)
+                    if (rBotL.capacity != 0 && rBotR.capacity != 0)
+                        endPos = (rBotL.priorityValue <= rBotR.priorityValue) ? {startPos, 1'b0} : {startPos, 1'b1};
+                    else if (rBotL.capacity != 0)
                         endPos = {startPos, 1'b0};
                     else
-                        endPos = {startPos, 1'b0} + 1;
+                        endPos = {startPos, 1'b1};
 
                     done = NEXT_LEVEL;
                 end
@@ -92,7 +94,7 @@ always_comb begin
                 end
             end
         end
-        
+
     endcase
 end
 

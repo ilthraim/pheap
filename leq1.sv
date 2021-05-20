@@ -17,7 +17,7 @@ always_ff @(posedge clk) begin
             if (wenTop) rTop <= wData;
             else rTop <= level_mem;
         end else rTop <= level_mem;
-        
+
     end
 
 typedef enum logic {READ_MEM, SET_OUT} states_t;
@@ -39,8 +39,8 @@ always_comb begin
         READ_MEM: begin
             if (start) begin
                 done = WAIT;
-                
-                
+
+
                 next = SET_OUT;
             end else next = READ_MEM;
         end
@@ -58,16 +58,18 @@ always_comb begin
                     if (rTop.priorityValue < in) begin //also fix this - if currentpriority less than priority to be written
                         out = rTop.priorityValue; //take a look at this logic: idk if legal
                         wData.active = 1'b1;
-                        wData.capacity = rTop.capacity - 1;
+                        wData.capacity = (rTop.capacity == 0) ? 0 : rTop.capacity - 1;
                         wData.priorityValue = in;
                         wenTop = 1'b1;
                     end else begin out = in;
                         wData.active = 1'b1;
-                        wData.capacity = rTop.capacity - 1;
+                        wData.capacity = (rTop.capacity == 0) ? 0 : rTop.capacity - 1;
                         wData.priorityValue = rTop.priorityValue;
                         wenTop = 1'b1;
                     end
-                    if (rBotL.capacity != 0)
+                    if (rBotL.capacity != 0 && rBotR.capacity != 0)
+                        endPos = (rBotL.priorityValue <= rBotR.priorityValue) ? 1'b0 : 1'b1;
+                    else if (rBotL.capacity != 0)
                         endPos = 1'b0;
                     else
                         endPos = 1'b1;

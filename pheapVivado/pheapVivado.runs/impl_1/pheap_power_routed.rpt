@@ -1,0 +1,183 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date             : Tue May 18 11:49:10 2021
+| Host             : mullberryst running 64-bit major release  (build 9200)
+| Command          : report_power -file pheap_power_routed.rpt -pb pheap_power_summary_routed.pb -rpx pheap_power_routed.rpx
+| Design           : pheap
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 42.029 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 41.169                           |
+| Device Static (W)        | 0.860                            |
+| Effective TJA (C/W)      | 4.6                              |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     6.626 |     9077 |       --- |             --- |
+|   LUT as Logic |     6.510 |     5351 |     63400 |            8.44 |
+|   CARRY4       |     0.102 |      304 |     15850 |            1.92 |
+|   Register     |     0.008 |     1209 |    126800 |            0.95 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |       75 |       --- |             --- |
+| Signals        |     6.146 |     8562 |       --- |             --- |
+| Block RAM      |    24.750 |    109.5 |       135 |           81.11 |
+| I/O            |     3.647 |      102 |       210 |           48.57 |
+| Static Power   |     0.860 |          |           |                 |
+| Total          |    42.029 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |    36.084 |      35.486 |      0.598 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.380 |       0.287 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     1.664 |       1.660 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     2.232 |       2.179 |      0.052 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| pheap                  |    41.169 |
+|   genHeap[10].I_LEVEL  |     0.330 |
+|     U_RAM              |     0.330 |
+|   genHeap[11].I_LEVEL  |     0.330 |
+|     U_RAM              |     0.330 |
+|   genHeap[12].I_LEVEL  |     0.674 |
+|     U_RAM              |     0.674 |
+|   genHeap[13].I_LEVEL  |     1.237 |
+|     U_RAM              |     1.237 |
+|   genHeap[14].I_LEVEL  |     2.846 |
+|     U_RAM              |     2.846 |
+|   genHeap[15].I_LEVEL  |     5.532 |
+|     U_RAM              |     5.532 |
+|   genHeap[16].I_LEVEL  |    10.964 |
+|     U_RAM              |    10.964 |
+|   genHeap[1].I_LEQ     |     1.929 |
+|   genHeap[2].I_LEQ     |     2.017 |
+|   genHeap[2].I_LEVEL   |     3.087 |
+|     U_RAM              |     1.003 |
+|   genHeap[2].I_SHIFTER |     0.004 |
+|   genHeap[3].I_LEQ     |     0.921 |
+|   genHeap[3].I_LEVEL   |     2.805 |
+|     U_RAM              |     1.007 |
+|   genHeap[3].I_SHIFTER |     0.002 |
+|   genHeap[4].I_LEQ     |     0.336 |
+|   genHeap[4].I_LEVEL   |     1.559 |
+|     U_RAM              |     0.748 |
+|   genHeap[5].I_LEQ     |     0.071 |
+|   genHeap[5].I_LEVEL   |     0.741 |
+|     U_RAM              |     0.476 |
+|   genHeap[6].I_LEQ     |     0.004 |
+|   genHeap[6].I_LEVEL   |     0.419 |
+|     U_RAM              |     0.366 |
+|   genHeap[7].I_LEVEL   |     0.336 |
+|     U_RAM              |     0.333 |
+|   genHeap[8].I_LEVEL   |     0.330 |
+|     U_RAM              |     0.330 |
+|   genHeap[9].I_LEVEL   |     0.330 |
+|     U_RAM              |     0.330 |
++------------------------+-----------+
+
+

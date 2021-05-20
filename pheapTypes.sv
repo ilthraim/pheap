@@ -2,7 +2,7 @@
 `define PHEAPTYPES
 package pheapTypes;
 
-    parameter LEVELS = 4;
+    parameter LEVELS = 16;
 
     typedef enum logic [1:0] {DONE, NEXT_LEVEL, WAIT} done_t;
     typedef enum logic [1:0] {FREE, LEQ, DEQ, CLEAR} opcode_t;

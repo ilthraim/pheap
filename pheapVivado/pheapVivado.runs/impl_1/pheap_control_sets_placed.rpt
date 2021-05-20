@@ -1,0 +1,123 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue May 18 11:48:37 2021
+| Host         : mullberryst running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file pheap_control_sets_placed.rpt
+| Design       : pheap
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    45 |
+|    Minimum number of control sets                        |    45 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   151 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    45 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    33 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              54 |           42 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             495 |          136 |
+| Yes          | No                    | No                     |             546 |          209 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             114 |           84 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------+---------------------------+------------------+----------------+--------------+
+|  Clock Signal  |         Enable Signal         |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------+---------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | genHeap[5].I_SHIFTER_i_1_n_0  | rst_IBUF                  |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | genHeap[6].I_SHIFTER_i_1_n_0  | rst_IBUF                  |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG | genHeap[7].I_SHIFTER_i_1_n_0  | rst_IBUF                  |                4 |              6 |         1.50 |
+|  clk_IBUF_BUFG | genHeap[8].I_SHIFTER_i_1_n_0  | rst_IBUF                  |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG | genHeap[9].I_SHIFTER_i_1_n_0  | rst_IBUF                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | genHeap[10].I_SHIFTER_i_1_n_0 | rst_IBUF                  |                8 |              9 |         1.12 |
+|  clk_IBUF_BUFG | genHeap[11].I_SHIFTER_i_1_n_0 | rst_IBUF                  |                8 |             10 |         1.25 |
+|  clk_IBUF_BUFG | genHeap[12].I_SHIFTER_i_1_n_0 | rst_IBUF                  |                7 |             11 |         1.57 |
+|  clk_IBUF_BUFG | genHeap[13].I_SHIFTER_i_1_n_0 | rst_IBUF                  |                9 |             12 |         1.33 |
+|  clk_IBUF_BUFG | genHeap[14].I_SHIFTER_i_1_n_0 | rst_IBUF                  |               10 |             13 |         1.30 |
+|  clk_IBUF_BUFG | genHeap[15].I_SHIFTER_i_1_n_0 | rst_IBUF                  |               10 |             14 |         1.40 |
+|  clk_IBUF_BUFG | genHeap[16].I_SHIFTER_i_1_n_0 | rst_IBUF                  |                9 |             15 |         1.67 |
+|  clk_IBUF_BUFG | genHeap[5].I_LEQ/done[1]      |                           |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | genHeap[15].I_LEQ/done[1]     |                           |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | genHeap[14].I_LEQ/done[1]     |                           |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | genHeap[4].I_LEQ/done[1]      |                           |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | genHeap[3].I_LEQ/done[1]      |                           |               11 |             32 |         2.91 |
+|  clk_IBUF_BUFG | genHeap[9].I_LEQ/done[1]      |                           |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | genHeap[10].I_LEQ/done[1]     |                           |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | genHeap[8].I_LEQ/done[1]      |                           |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | genHeap[11].I_LEQ/done[1]     |                           |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | genHeap[12].I_LEQ/done[1]     |                           |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG | genHeap[13].I_LEQ/done[1]     |                           |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG | genHeap[1].I_LEQ/level_mem    |                           |               22 |             32 |         1.45 |
+|  clk_IBUF_BUFG | genHeap[2].I_LEQ/done[1]      |                           |               15 |             32 |         2.13 |
+|  clk_IBUF_BUFG | genHeap[6].I_LEQ/done[1]      |                           |               10 |             32 |         3.20 |
+|  clk_IBUF_BUFG | genHeap[7].I_LEQ/done[1]      |                           |               14 |             32 |         2.29 |
+|  clk_IBUF_BUFG | genHeap[16].I_LEQ/in_reg0     |                           |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG |                               | genHeap[5].I_LEQ/done[1]  |                9 |             33 |         3.67 |
+|  clk_IBUF_BUFG |                               | genHeap[1].I_LEQ/done[1]  |                7 |             33 |         4.71 |
+|  clk_IBUF_BUFG |                               | genHeap[2].I_LEQ/done[1]  |                8 |             33 |         4.12 |
+|  clk_IBUF_BUFG |                               | genHeap[6].I_LEQ/done[1]  |               11 |             33 |         3.00 |
+|  clk_IBUF_BUFG |                               | genHeap[7].I_LEQ/done[1]  |                8 |             33 |         4.12 |
+|  clk_IBUF_BUFG |                               | genHeap[15].I_LEQ/done[1] |               12 |             33 |         2.75 |
+|  clk_IBUF_BUFG |                               | genHeap[14].I_LEQ/done[1] |                7 |             33 |         4.71 |
+|  clk_IBUF_BUFG |                               | genHeap[4].I_LEQ/done[1]  |               14 |             33 |         2.36 |
+|  clk_IBUF_BUFG |                               | genHeap[3].I_LEQ/done[1]  |                7 |             33 |         4.71 |
+|  clk_IBUF_BUFG |                               | genHeap[8].I_LEQ/done[1]  |                8 |             33 |         4.12 |
+|  clk_IBUF_BUFG |                               | genHeap[13].I_LEQ/done[1] |                9 |             33 |         3.67 |
+|  clk_IBUF_BUFG |                               | genHeap[10].I_LEQ/done[1] |                9 |             33 |         3.67 |
+|  clk_IBUF_BUFG |                               | genHeap[9].I_LEQ/done[1]  |                9 |             33 |         3.67 |
+|  clk_IBUF_BUFG |                               | genHeap[12].I_LEQ/done[1] |               10 |             33 |         3.30 |
+|  clk_IBUF_BUFG |                               | genHeap[11].I_LEQ/done[1] |                8 |             33 |         4.12 |
+|  clk_IBUF_BUFG | p_1_out                       |                           |                9 |             34 |         3.78 |
+|  clk_IBUF_BUFG |                               |                           |               42 |             54 |         1.29 |
++----------------+-------------------------------+---------------------------+------------------+----------------+--------------+
+
+
