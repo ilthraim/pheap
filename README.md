@@ -1,0 +1,1 @@
+Ethan Miller Honors Thesis concerning FPGA acceleration of a heap-based priority queue completed at Lafayette College under the guidance of Professor John Nestor in 2021. See pdf in repo for full thesis text
